@@ -8,7 +8,9 @@ const PORT = process.env.PORT || 5000;
 
 // Middleware
 app.use(cors({
-    origin: 'https://tutam9-maharakafadhilah.vercel.app' // Sesuaikan dengan domain frontend di Vercel
+    origin: ['https://tutam9-maharakafadhilah.vercel.app', 'http://localhost:5173'],
+    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+    allowedHeaders: ['Content-Type', 'Authorization']
   }));
 app.use(express.json());
 
